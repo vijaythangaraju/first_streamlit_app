@@ -4,7 +4,7 @@ import requests
 import pandas
 import snowflake.connector
 # do not run anything past here while we troubleshoot
-streamlit.stop()
+
 
 streamlit.header('Breakfast Favourites')
 streamlit.text('🥣 Omega 3 & Blueberry Oatmeal')
@@ -52,6 +52,8 @@ streamlit.dataframe(my_data_row)
 
 add_my_fruit = streamlit.text_input('What fruit would you like to add?','Jackfruit')
 streamlit.write('Thanks for adding ', add_my_fruit)
+
+streamlit.stop()
 
 #this will not work properly
 my_cur.execute("insert into fruit_load_list values ('from streamlit')")
