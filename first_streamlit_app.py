@@ -80,7 +80,7 @@ if streamlit.button('Get Fruit List'):
       my_cur.execute("select * from pc_rivery_db.public.fruit_load_list")
       my_data_row = my_cur.fetchall()
       streamlit.header("Fruits List contains:")
-      streamlit.close()
+      my_cnx.close()
       streamlit.dataframe(my_data_row)
       
       
