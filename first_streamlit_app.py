@@ -2,6 +2,8 @@
 import streamlit
 import requests
 import snowflake.connector
+# do not run anything past here while we troubleshoot
+streamlit.stop()
 
 streamlit.header('Breakfast Favourites')
 streamlit.text('🥣 Omega 3 & Blueberry Oatmeal')
