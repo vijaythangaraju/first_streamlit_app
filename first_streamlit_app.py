@@ -1,6 +1,7 @@
 
 import streamlit
 import requests
+import pandas
 import snowflake.connector
 # do not run anything past here while we troubleshoot
 streamlit.stop()
@@ -13,7 +14,7 @@ streamlit.text('🥑🍞 Avacoda Toast')
 
 streamlit.header('🍌🥭 Build Your Own Fruit Smoothie 🥝🍇')
 
-import pandas
+
 
 my_fruit_list = pandas.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
 
